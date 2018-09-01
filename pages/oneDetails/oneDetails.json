@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "ONE · 一个",
+  "usingComponents": {
+    "header": "/component/header/header",
+    "menu": "/component/menu/menu",
+    "loading": "/component/loading/loading"
+  }
+}

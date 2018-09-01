@@ -1,0 +1,74 @@
+/* pages/oneDetails/oneDetails.wxss */
+
+.one-forward {
+  font-size: 32rpx;
+}
+
+.one-day {
+  font-size: 96rpx;
+  line-height: 50rpx;
+  display: block;
+}
+
+.one-date {
+  font-size: 28rpx;
+  line-height: 28rpx;
+  display: block;
+}
+
+.one-line {
+  width: 30%;
+  margin: 30rpx auto;
+  border-bottom: 2rpx solid #eee;
+}
+
+.one-footer {
+  position: fixed;
+  width: 100%;
+  height: 96rpx;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0rem 4rpx 8rpx rgba(0, 0, 0, 0.5);
+}
+
+.one-footer>navigator, .one-footer>text {
+  width: 50%;
+  text-align: center;
+  float: left;
+  line-height: 96rpx;
+}
+
+.one-img {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  /*最大不能超过屏幕*/
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/*这个是为了使用padding做占位, 也是为了把高给挤下去*/
+
+.one-img::before {
+  content: " ";
+  display: block;
+  background-color: #f7f7f7;
+  padding-bottom: 66.6666%;
+}
+
+/*设置图片, 使用绝对定位*/
+
+.one-img image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  /*设置高会把图片强制拉满容器, 解决图片比例不对(要求是1:1, 实际是2:1)的显示缺陷badcase*/
+  height: 100%;
+}
+
+.one-words-info {
+  line-height: 25rpx;
+}

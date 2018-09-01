@@ -1,0 +1,11 @@
+/* pages/about/about.wxss */
+
+.logo {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 30rpx auto;
+}
+
+.about-m-h {
+  min-height: calc(100vh - 90rpx);
+}

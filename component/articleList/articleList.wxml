@@ -1,0 +1,16 @@
+<!--component/articleList/articleList.wxml-->
+<wxs module="utils" src="../../utils/util.wxs"></wxs>
+<navigator url="/pages/articleDetails/articleDetails?id={{item.id}}" class="m-t-xs bg-white wrapper block" wx:for="{{articleList}}" wx:key="index">
+  <text class="article-list-category block">
+  - {{item.tag_list.length ? item.tag_list[0].title : '阅读'}} -
+  </text>
+  <text class="article-list-title block">{{item.title}}</text>
+  <text class="article-list-author block">文 / {{utils.getAuthor(item.author_list)}}</text>
+  <view class="article-list-img ">
+    <image src="{{item.img_url}}" alt="" />
+  </view>
+  <text class="m-b-sm block">{{item.guide_word}}</text>
+  <text class="article-list-time block">
+  {{item.post_date}}
+  </text>
+</navigator>

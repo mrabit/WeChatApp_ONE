@@ -1,0 +1,41 @@
+<!--pages/oneDetails/oneDetails.wxml-->
+<view class="body">
+  <view bindtap='handleChangeMenusOpen'>
+    <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
+  </view>
+  <menu bind:onChangeMenusOpen="handleChangeMenusOpen" is-open="{{isOpen}}" />
+  <view class="container" wx:if="{{!loading}}">
+    <view class="m-t p-b-xxl">
+      <view class="one-img block">
+        <image class="img-full" src="{{oneInfo.img_url}}" alt="" />
+      </view>
+      <view class="wrapper">
+        <view class="block clearfix">
+          <text class="pull-left">{{oneInfo.volume}}</text>
+          <text class="pull-right">{{oneInfo.title}}{{oneInfo.pic_info ? ' | ' + oneInfo.pic_info : '' }}
+          </text>
+        </view>
+        <view class="text-center m-t">
+          <text class="one-day">
+            {{oneInfo.day}}
+          </text>
+          <text class="one-date m-t">
+            {{oneInfo.date}}
+          </text>
+        </view>
+        <text class="block one-line"></text>
+        <view class="one-forward">
+          <text>{{oneInfo.forward}}</text>
+        </view>
+        <text class="text-muted font-xs one-words-info m-t block text-center">
+          {{oneInfo.words_info}}
+        </text>
+      </view>
+      <view class="one-footer">
+        <text class="{{!oneInfo.prev?'text-muted':''}}" data-id="{{oneInfo.prev}}" bindtap='getOneDetails'>上一篇</text>
+        <text class="{{!oneInfo.next?'text-muted':''}}" data-id="{{oneInfo.next}}" bindtap='getOneDetails'>下一篇</text>
+      </view>
+    </view>
+  </view>
+  <loading wx:if="{{loading}}" />
+</view>

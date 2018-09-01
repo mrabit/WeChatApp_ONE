@@ -1,0 +1,56 @@
+.home-img {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  /*最大不能超过屏幕*/
+  max-width: 100%;
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+/*这个是为了使用padding做占位, 也是为了把高给挤下去*/
+
+.home-img::before {
+  content: " ";
+  display: block;
+  background-color: #f7f7f7;
+  padding-bottom: calc(100vh - 100rpx);
+}
+
+/*设置图片, 使用绝对定位*/
+
+.home-img image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  /*设置高会把图片强制拉满容器, 解决图片比例不对(要求是1:1, 实际是2:1)的显示缺陷badcase*/
+  height: calc(100vh - 95rpx);
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.home-mask {
+  margin-top: 95rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: calc(100vh - 95rpx);
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.home-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  color: white;
+  font-size: 96rpx;
+}
+
+.home-content-title {
+  font-size: 32rpx;
+}

@@ -1,0 +1,7 @@
+/* component/header.wxss */
+
+.header {
+  /* webkit-box-shadow: 0.3125rem 0 0.3125rem rgba(0, 0, 0, 0.15); *//* box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.15); */
+  z-index: 99;
+  height: 95rpx;
+}

@@ -1,0 +1,12 @@
+<!--pages/articleList/articleList.wxml-->
+<view class="body">
+  <view bindtap='handleChangeMenusOpen'>
+    <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
+  </view>
+  <menu bind:onChangeMenusOpen="handleChangeMenusOpen" is-open="{{isOpen}}" />
+  <view class="container bg">
+    <article-list articleList="{{articleList}}" />
+  </view>
+  <loading wx:if="{{loading}}" />
+  <end wx:if="{{isEnd}}" />
+</view>

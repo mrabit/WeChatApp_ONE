@@ -1,0 +1,6 @@
+<!--component/loading/loading.wxml-->
+<view class="mask-content" catchtouchmove='moveD' hidden="{{!loading}}">
+  <view class="mask-msg">
+    <view class="iconfont icon-Loading icon-spin" />
+  </view>
+</view>

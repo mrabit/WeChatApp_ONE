@@ -1,0 +1,69 @@
+/* component/articleList/articleList.wxss */
+
+.article-list-category {
+  font-size: 28rpx;
+  line-height: 20rpx;
+  text-align: center;
+}
+
+.article-list-title {
+  font-size: 48rpx;
+  margin: 20rpx 0;
+}
+
+.article-list-author, .article-list-time {
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #98a6ad;
+}
+
+.article-list-img {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  /*最大不能超过屏幕*/
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 20rpx 0;
+}
+
+/*这个是为了使用padding做占位, 也是为了把高给挤下去*/
+
+.article-list-img::before {
+  content: " ";
+  display: block;
+  background-color: #f7f7f7;
+  padding-bottom: 60%;
+}
+
+/*设置图片, 使用绝对定位*/
+
+.article-list-img image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  /*设置高会把图片强制拉满容器, 解决图片比例不对(要求是1:1, 实际是2:1)的显示缺陷badcase*//*height: 100%;*/
+}
+
+.block {
+  display: block;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.wrapper {
+  padding: 30rpx;
+}
+
+.m-t-xs {
+  margin-top: 20rpx;
+}
+
+.bg-white {
+  background: #fff;
+}

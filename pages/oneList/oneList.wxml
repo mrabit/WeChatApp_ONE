@@ -1,0 +1,21 @@
+<!--pages/oneList/oneList.wxml-->
+<view class="body">
+  <view bindtap='handleChangeMenusOpen'>
+    <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
+  </view>
+  <menu bind:onChangeMenusOpen="handleChangeMenusOpen" is-open="{{isOpen}}" />
+  <view class="container bg">
+    <navigator url="../oneDetails/oneDetails?id={{item.id}}" class="one-list-items" wx:for="{{oneList}}" wx:key="index">
+      <text class="text-center one-list-date block">{{item.post_date}}</text>
+      <text class="text-center text-xs m-b-sm m-t-sm block">{{item.volume}}</text>
+      <view class="one-img m-b">
+        <image src="{{item.img_url}}" alt="" />
+      </view>
+      <text class="text-center text-xs block m-t-sm">{{item.title}} | {{item.pic_info}}           </text>
+      <text class="wrapper block">{{item.forward}}</text>
+      <text class="text-center text-xs block">{{item.words_info}}</text>
+    </navigator>
+  </view>
+  <loading wx:if="{{loading}}" />
+  <end wx:if="{{isEnd}}" />
+</view>

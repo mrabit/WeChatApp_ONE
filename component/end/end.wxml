@@ -1,0 +1,4 @@
+<!--component/end/end.wxml-->
+<view class="end">
+  <text>到底了</text>
+</view>

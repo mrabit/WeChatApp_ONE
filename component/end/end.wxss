@@ -1,0 +1,43 @@
+/* component/end/end.wxss */
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.end {
+  text-align: center;
+  width: 100%;
+  height: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+.end text {
+  position: relative;
+  line-height: 40rpx;
+  width: 100rpx;
+  text-align: center;
+}
+
+/*CSS伪类用法*/
+
+.end text:after, .end text:before {
+  position: absolute;
+  top: 50%;
+  background: #ddd;
+  content: "";
+  height: 1px;
+  width: 100rpx;
+}
+
+.end text:after {
+  right: -150rpx;
+}
+
+.end text:before {
+  left: -150rpx;
+}

@@ -1,0 +1,123 @@
+/**app.wxss**/
+
+.body {
+  font-family: "PingFangSC-Light",
+                 sans-serif,
+                 "Source Sans Pro",
+                 "Helvetica Neue",
+                 Helvetica,
+                 Arial;
+  font-size: 28rpx;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.42857143;
+  color: #58666e;
+  background-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+  /* padding: 20rpx 30rpx; */
+  margin-top: 95rpx;
+}
+
+.bg {
+  background-color: #f0f3f4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline-block !important;
+}
+
+.none {
+  display: none;
+}
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: " ";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.wrapper {
+  padding: 30rpx;
+}
+
+.padder {
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+}
+
+.m-t {
+  margin-top: 30rpx;
+}
+
+.m-l {
+  margin-left: 30rpx;
+}
+
+.m-b {
+  margin-bottom: 30rpx;
+}
+
+.m-b-sm {
+  margin-bottom: 20rpx;
+}
+
+.m-t-xl {
+  margin-top: 80rpx;
+}
+
+.m-t-sm {
+  margin-top: 20rpx;
+}
+
+.m-b-lg {
+  margin-bottom: 60rpx;
+}
+
+.m-b-xxl {
+  margin-bottom: 120rpx;
+}
+
+.p-b-xxl {
+  padding-bottom: 120rpx;
+}
+
+.font-bold {
+  font-weight: bolder;
+}
+
+.text-muted {
+  color: #98a6ad;
+}
+
+.text-xs {
+  font-size: 24rpx;
+}
+
+.img-full {
+  width: 100%;
+}
+
+.img-full image {
+  width: 100%;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}

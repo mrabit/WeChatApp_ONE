@@ -1,0 +1,8 @@
+module.exports = {
+  getAuthor: function(list) {
+    list = list || [];
+    return list.map(function(v) {
+      return v.user_name;
+    }).join(',')
+  }
+};

@@ -1,0 +1,45 @@
+<!--pages/articleDetails/articleDetails.wxml-->
+<wxs module="utils" src="../../utils/util.wxs"></wxs>
+<view class="body">
+  <view bindtap='handleChangeMenusOpen'>
+    <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
+  </view>
+  <menu bind:onChangeMenusOpen="handleChangeMenusOpen" is-open="{{isOpen}}" />
+  <view class="container" wx:if="{{!loading}}">
+    <view class="">
+      <view class="padder">
+        <text class="article-title block">
+          {{articleDetails.title}}
+        </text>
+        <text class="article-line block" />
+        <text class="article-author block">
+          文 | {{utils.getAuthor(articleDetails.author_list)}}
+        </text>
+        <rich-text nodes="{{articleDetails.content}}" class="article-content block" />
+        <text class="text-muted text-xs m-t block" wx:if='{{articleDetails.author_introduce}}'>
+        {{articleDetails.author_introduce}}
+        </text>
+        <text class="text-muted text-xs m-t block" wx:if='{{articleDetails.copyright}}'>
+        {{articleDetails.copyright}}
+        </text>
+        <text class="article-author-title block">作者</text>
+        <text class="article-line block" />
+        <view class="article-author-list">
+          <view class="article-author-items" wx:for="{{articleDetails.author_list}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="author">
+            <image src="{{author.web_url}}" alt="" />
+            <view class="block">
+              <text class="inline m-t">{{author.user_name}}</text>
+              <text class="inline m-t m-l">{{author.wb_name}}</text>
+            </view>
+            <text class="block">{{author.desc}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="article-footer">
+        <text class="{{!articleDetails.prev?'text-muted':''}}" data-id="{{articleDetails.prev}}" bindtap='getArticleDetails'>上一篇</text>
+        <text class="{{!articleDetails.next?'text-muted':''}}" data-id="{{articleDetails.next}}" bindtap='getArticleDetails'>下一篇</text>
+      </view>
+    </view>
+  </view>
+  <loading wx:if="{{loading}}" />
+</view>

@@ -1,0 +1,68 @@
+/* pages/articleDetails/articleDetails.wxss */
+
+.article-title {
+  color: black;
+  font-size: 56rpx;
+  margin-top: 100rpx;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.article-line {
+  border: 4rpx solid #000;
+  margin: 14rpx 0;
+  width: 140rpx;
+  margin-top: 30rpx;
+}
+
+.article-author {
+  color: black;
+  font-size: 26rpx;
+  line-height: 20rpx;
+  margin-top: 28rpx;
+}
+
+.article-content {
+  line-height: 52rpx;
+  margin-top: 28rpx;
+  word-break: break-all;
+}
+
+.article-author-title {
+  font-size: 30rpx;
+  margin-top: 50rpx;
+  margin-bottom: 0;
+}
+
+.article-author-list {
+  padding-bottom: 120rpx;
+}
+
+.article-author-items image {
+  width: 120rpx;
+  height: 120rpx;
+  vertical-align: middle;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.article-author-items text {
+  vertical-align: middle;
+}
+
+.article-footer {
+  position: fixed;
+  width: 100%;
+  height: 96rpx;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.5);
+}
+
+.article-footer>navigator, .article-footer>text {
+  width: 50%;
+  text-align: center;
+  float: left;
+  line-height: 96rpx;
+}
