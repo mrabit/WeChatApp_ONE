@@ -1,8 +1,6 @@
 <!--pages/about/about.wxml-->
 <view class="body">
-  <view bindtap='handleChangeMenusOpen'>
-    <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
-  </view>
+  <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
   <menu bind:onChangeMenusOpen="handleChangeMenusOpen" is-open="{{isOpen}}" />
   <view class="container bg about-m-h">
     <view class="wrapper">

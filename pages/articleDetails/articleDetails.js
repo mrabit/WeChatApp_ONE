@@ -1,6 +1,7 @@
 // pages/articleDetails/articleDetails.js
 let {
-  requestData
+  requestData,
+  postFormId
 } = require('../../utils/util.js');
 let dayjs = require('../..//miniprogram_npm/dayjs/index.js');
 Page({
@@ -38,13 +39,14 @@ Page({
       isOpen: e.detail
     })
   },
+  postFormId,
   getArticleDetails(e) {
     let id = typeof e === "object" ? e.target.dataset.id : e;
     if (!id) return false;
     this.setData({
       loading: true
     });
-    requestData(`https://one.mrabit.com/api/article/${id}`).then(d => {
+    requestData(`/api/article/${id}`).then(d => {
       setTimeout(_ => {
         this.setData({
           articleDetails: d,

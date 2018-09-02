@@ -1,8 +1,6 @@
 <!--pages/oneList/oneList.wxml-->
 <view class="body">
-  <view bindtap='handleChangeMenusOpen'>
-    <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
-  </view>
+  <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
   <menu bind:onChangeMenusOpen="handleChangeMenusOpen" is-open="{{isOpen}}" />
   <view class="container bg">
     <navigator url="../oneDetails/oneDetails?id={{item.id}}" class="one-list-items" wx:for="{{oneList}}" wx:key="index">

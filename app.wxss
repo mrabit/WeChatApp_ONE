@@ -20,6 +20,20 @@
   margin-top: 95rpx;
 }
 
+button, button::after, .button-hover {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: unset;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  text-align: inherit;
+  line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .bg {
   background-color: #f0f3f4;
 }

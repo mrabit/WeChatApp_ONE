@@ -58,7 +58,7 @@ Page({
     this.setData({
       loading: true
     });
-    requestData(`https://one.mrabit.com/api/article/get_list`, {
+    requestData(`/api/article/get_list`, {
       page: this.data.currentPage,
       length: 10
     }).then(d => {

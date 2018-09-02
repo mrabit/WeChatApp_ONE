@@ -40,13 +40,6 @@ Page({
     });
     this.getOneList();
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-    console.log('用户点击右上角分享');
-  },
   handleChangeMenusOpen(e) {
     this.setData({
       isOpen: e.detail
@@ -56,7 +49,7 @@ Page({
     this.setData({
       loading: true
     });
-    requestData('https://one.mrabit.com/api/one/get_list', {
+    requestData('/api/one/get_list', {
       page: this.data.currentPage,
       length: 10
     }).then(d => {

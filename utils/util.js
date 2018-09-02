@@ -1,20 +1,3 @@
-const app = getApp();
-
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
-
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
-}
-
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
-}
 /**
  * 网络请求方法
  * @param url {string} 请求url
@@ -24,15 +7,16 @@ const formatNumber = n => {
  * @param completeCallback {function} 完成回调函数
  * @returns {void}
  */
-const requestData = (url, data) => {
+const requestData = (url, data, method = "GET") => {
+  const app = getApp();
   if (app.debug) {
     console.log('requestData url: ', url);
   }
   return new Promise((resolve, reject) => {
     return wx.request({
-      url: url,
+      url: app.globalData.domain + url,
       data: data,
-      method: 'GET',
+      method,
       header: {
         'Content-Type': 'application/json'
       },
@@ -54,7 +38,19 @@ const requestData = (url, data) => {
     })
   });
 }
+const postFormId = (e) => {
+  let sysInfo = wx.getSystemInfoSync();
+  requestData('/api/wx/insertFormId', {
+    open_id: wx.getStorageSync('OPEN_ID'),
+    form_id: e.detail.formId,
+    brand: sysInfo.brand,
+    model: sysInfo.model,
+    system: sysInfo.system,
+    platform: sysInfo.platform,
+    version: sysInfo.version
+  }, "POST");
+}
 module.exports = {
-  formatTime: formatTime,
-  requestData
+  requestData,
+  postFormId
 }

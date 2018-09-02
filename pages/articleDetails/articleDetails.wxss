@@ -60,7 +60,7 @@
   box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.5);
 }
 
-.article-footer>navigator, .article-footer>text {
+.article-footer>navigator, .article-footer button {
   width: 50%;
   text-align: center;
   float: left;

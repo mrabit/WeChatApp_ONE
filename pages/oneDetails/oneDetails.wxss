@@ -1,5 +1,19 @@
 /* pages/oneDetails/oneDetails.wxss */
 
+button, button::after, .button-hover {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: unset;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  text-align: inherit;
+  line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .one-forward {
   font-size: 32rpx;
 }
@@ -31,7 +45,7 @@
   box-shadow: 0rem 4rpx 8rpx rgba(0, 0, 0, 0.5);
 }
 
-.one-footer>navigator, .one-footer>text {
+.one-footer>navigator, .one-footer button {
   width: 50%;
   text-align: center;
   float: left;

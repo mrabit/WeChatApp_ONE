@@ -1,8 +1,6 @@
 <!--pages/oneDetails/oneDetails.wxml-->
 <view class="body">
-  <view bindtap='handleChangeMenusOpen'>
-    <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
-  </view>
+  <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
   <menu bind:onChangeMenusOpen="handleChangeMenusOpen" is-open="{{isOpen}}" />
   <view class="container" wx:if="{{!loading}}">
     <view class="m-t p-b-xxl">
@@ -31,10 +29,10 @@
           {{oneInfo.words_info}}
         </text>
       </view>
-      <view class="one-footer">
-        <text class="{{!oneInfo.prev?'text-muted':''}}" data-id="{{oneInfo.prev}}" bindtap='getOneDetails'>上一篇</text>
-        <text class="{{!oneInfo.next?'text-muted':''}}" data-id="{{oneInfo.next}}" bindtap='getOneDetails'>下一篇</text>
-      </view>
+      <form report-submit="true" bindsubmit="postFormId" class="one-footer">
+        <button form-type='submit' class="{{!oneInfo.prev?'text-muted':''}}" data-id="{{oneInfo.prev}}" bindtap='getOneDetails'>上一篇</button>
+        <button form-type='submit' class="{{!oneInfo.next?'text-muted':''}}" data-id="{{oneInfo.next}}" bindtap='getOneDetails'>下一篇</button>
+      </form>
     </view>
   </view>
   <loading wx:if="{{loading}}" />

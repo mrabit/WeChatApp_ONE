@@ -5,3 +5,41 @@
   z-index: 99;
   height: 95rpx;
 }
+
+button, button::after, .button-hover {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: unset;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  text-align: inherit;
+  line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*真正的button样式的控件需要设置class为button*/
+
+.button {
+  width: 690rpx;
+  height: 86rpx;
+  background-color: #12b7f5;
+  color: #fff;
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2.55555556;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+}

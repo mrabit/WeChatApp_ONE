@@ -1,4 +1,8 @@
 <!--component/header.wxml-->
-<van-nav-bar custom-class="header" title="{{title}}" fixed="true">
-  <van-icon name="wap-nav" bind:click="handleClickOpenMenu" slot="left" />
-</van-nav-bar>
+<form report-submit="true" bindsubmit="postFormId">
+  <button form-type='submit' bindtap='handleClickOpenMenu'>
+    <van-nav-bar custom-class="header" title="{{title}}" fixed="true">
+      <van-icon name="wap-nav" bind:click="handleClickOpenMenu" slot="left" />
+    </van-nav-bar>
+  </button>
+</form>

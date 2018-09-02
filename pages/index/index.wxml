@@ -1,8 +1,6 @@
 <!--index.wxml-->
 <view class="body">
-  <view bindtap='handleChangeMenusOpen'>
-    <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
-  </view>
+  <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
   <menu bind:onChangeMenusOpen="handleChangeMenusOpen" is-open="{{isOpen}}" />
   <view class="container bg" wx:if="{{!loading}}">
     <navigator url="../oneDetails/oneDetails?id={{firstScreen.id}}" class="home-container">

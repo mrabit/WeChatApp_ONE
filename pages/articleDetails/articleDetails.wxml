@@ -1,9 +1,7 @@
 <!--pages/articleDetails/articleDetails.wxml-->
 <wxs module="utils" src="../../utils/util.wxs"></wxs>
 <view class="body">
-  <view bindtap='handleChangeMenusOpen'>
-    <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
-  </view>
+  <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
   <menu bind:onChangeMenusOpen="handleChangeMenusOpen" is-open="{{isOpen}}" />
   <view class="container" wx:if="{{!loading}}">
     <view class="">
@@ -35,10 +33,10 @@
           </view>
         </view>
       </view>
-      <view class="article-footer">
-        <text class="{{!articleDetails.prev?'text-muted':''}}" data-id="{{articleDetails.prev}}" bindtap='getArticleDetails'>上一篇</text>
-        <text class="{{!articleDetails.next?'text-muted':''}}" data-id="{{articleDetails.next}}" bindtap='getArticleDetails'>下一篇</text>
-      </view>
+      <form report-submit="true" bindsubmit="postFormId" class="article-footer">
+        <button form-type='submit' class="{{!articleDetails.prev?'text-muted':''}}" data-id="{{articleDetails.prev}}" bindtap='getArticleDetails'>上一篇</button>
+        <button form-type='submit' class="{{!articleDetails.next?'text-muted':''}}" data-id="{{articleDetails.next}}" bindtap='getArticleDetails'>下一篇</button>
+      </form>
     </view>
   </view>
   <loading wx:if="{{loading}}" />

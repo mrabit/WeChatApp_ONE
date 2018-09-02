@@ -1,6 +1,7 @@
 // pages/oneDetails/oneDetails.js
 let {
-  requestData
+  requestData,
+  postFormId
 } = require('../../utils/util.js');
 let dayjs = require('../..//miniprogram_npm/dayjs/index.js');
 Page({
@@ -33,6 +34,7 @@ Page({
       imageUrl: "https:" + this.data.oneInfo.img_url
     }
   },
+  postFormId,
   handleChangeMenusOpen(e) {
     this.setData({
       isOpen: e.detail
@@ -44,7 +46,7 @@ Page({
     this.setData({
       loading: true
     })
-    requestData(`https://one.mrabit.com/api/one/${id}`).then(d => {
+    requestData(`/api/one/${id}`).then(d => {
       setTimeout(_ => {
         wx.setNavigationBarTitle({
           title: d.volume + " - ONE · 一个"

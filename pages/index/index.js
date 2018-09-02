@@ -29,7 +29,7 @@ Page({
     this.setData({
       loading: true
     });
-    requestData('https://one.mrabit.com/api/home', {
+    requestData('/api/home', {
       date: "latest"
     }).then(d => {
       let firstScreen = d.splice(0, 1)[0] || {};
