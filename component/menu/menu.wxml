@@ -1,17 +1,8 @@
 <!--component/menu/menu.wxml-->
-<view class="menus {{isOpen?'menus-open':''}}">
+<view class="menus {{isOpen?'menus-open':''}}" wx:if="{{menus.length}}">
   <ul class="menus-list">
-    <li class="menus-list-item">
-      <navigator bindtap='handleClickCloseMenus' open-type='reLaunch' url="/pages/index/index">首页</navigator>
-    </li>
-    <li class="menus-list-item">
-      <navigator bindtap='handleClickCloseMenus' open-type='reLaunch' url="/pages/oneList/oneList">图文</navigator>
-    </li>
-    <li class="menus-list-item">
-      <navigator bindtap='handleClickCloseMenus' open-type='reLaunch' url="/pages/articleList/articleList">阅读</navigator>
-    </li>
-    <li class="menus-list-item">
-      <navigator bindtap='handleClickCloseMenus' open-type='reLaunch' url="/pages/about/about">关于</navigator>
+    <li class="menus-list-item" wx:for="{{menus}}" wx:key="{{index}}">
+      <navigator bindtap='handleClickCloseMenus' open-type='{{item["open-type"]}}' url="{{item.url}}">{{item.name}}</navigator>
     </li>
   </ul>
 </view>

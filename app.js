@@ -4,10 +4,10 @@ let {
 } = require("./utils/util.js");
 App({
   onLaunch: function() {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    // // 展示本地存储能力
+    // var logs = wx.getStorageSync('logs') || []
+    // logs.unshift(Date.now())
+    // wx.setStorageSync('logs', logs)
     if (this.debug) {
       this.globalData.domain = 'http://192.168.0.241:8181';
     }
