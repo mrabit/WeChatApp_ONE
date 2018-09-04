@@ -63,6 +63,7 @@
 .article-footer>navigator, .article-footer button {
   width: 50%;
   text-align: center;
+  font-size: 30rpx;
   float: left;
   line-height: 96rpx;
 }

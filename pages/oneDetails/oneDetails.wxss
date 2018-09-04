@@ -49,6 +49,7 @@ button, button::after, .button-hover {
   width: 50%;
   text-align: center;
   float: left;
+  font-size: 30rpx;
   line-height: 96rpx;
 }
 
