@@ -1,7 +1,5 @@
 // component/header.js
 const app = getApp();
-let defaultTextY = 180;
-let dayjs = require('../../miniprogram_npm/dayjs/index.js');
 const {
   requestData,
   postFormId

@@ -9,10 +9,10 @@ App({
     // logs.unshift(Date.now())
     // wx.setStorageSync('logs', logs)
     if (this.debug) {
-      this.globalData.domain = 'http://192.168.11.106:8181';
+      this.globalData.domain = 'http://192.168.0.241:8181';
     }
   },
-  debug: true,
+  debug: false,
   globalData: {
     domain: 'https://one.mrabit.com'
   },
