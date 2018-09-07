@@ -12,19 +12,31 @@ Component({
     title: {
       type: String,
       value: ""
+    },
+    oneInfo: {
+      type: Object,
+      value: {}
+    },
+    articleInfo: {
+      type: Object,
+      value: {}
+    },
+    category: {
+      type: String,
+      value: ""
+    },
+    loading: {
+      type: Boolean,
+      value: true
     }
+  },
+  data: {
+    OPEN_ID: ""
   },
   created() {
     wx.showShareMenu();
     this.getLocalOpenId();
   },
-  /**
-   * 组件的初始数据
-   */
-  data: {
-    OPEN_ID: ""
-  },
-
   /**
    * 组件的方法列表
    */

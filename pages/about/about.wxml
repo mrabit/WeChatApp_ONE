@@ -9,6 +9,8 @@
       <text class="text-center font-bold m-b block">ONE·一个 每日阅读</text>
       <text class="text-center font-bold m-b block">复杂世界里，一个就够了。</text>
       <text>该小程序所有数据均由 「ONE · 一个」 提供，本人采取非正常手段获取，仅作为日常学习之用。获取跟共享的行为或许有侵犯权益的嫌疑。若被告知需停止共享与使用，本人会及时删除该小程序与整个项目。</text>
+      <text class="block m-t">GitHub: https://github.com/mrabit</text>
+      <text class="block">联系方式: yuany@mrabit.com</text>
     </view>
   </view>
 </view>

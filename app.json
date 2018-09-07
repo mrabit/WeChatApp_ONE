@@ -2,10 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/about/about",
+    "pages/oneDetails/oneDetails",
     "pages/articleList/articleList",
     "pages/articleDetails/articleDetails",
-    "pages/oneList/oneList",
-    "pages/oneDetails/oneDetails"
+    "pages/oneList/oneList"
   ],
   "window": {
     "backgroundTextStyle": "light",

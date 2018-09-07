@@ -3,7 +3,7 @@ let {
   requestData,
   postFormId
 } = require('../../utils/util.js');
-let dayjs = require('../..//miniprogram_npm/dayjs/index.js');
+let dayjs = require('../../miniprogram_npm/dayjs/index.js');
 Page({
 
   /**
@@ -21,7 +21,7 @@ Page({
    */
   onLoad: function(options) {
     this.setData({
-      id: options.id
+      id: options.id || 2159
     });
     this.getOneDetails(this.data.id);
   },

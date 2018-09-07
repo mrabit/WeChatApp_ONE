@@ -1,6 +1,6 @@
 <!--pages/oneDetails/oneDetails.wxml-->
 <view class="body">
-  <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
+  <header title="{{title}}" category="one" loading="{{loading}}" oneInfo="{{oneInfo}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
   <menu bind:onChangeMenusOpen="handleChangeMenusOpen" is-open="{{isOpen}}" />
   <view class="container" wx:if="{{!loading}}">
     <view class="m-t p-b-xxl">

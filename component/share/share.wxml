@@ -1,0 +1,4 @@
+<!--component/share/share.wxml-->
+<view class="iconfont icon-fenxiangpengyouquanweixinWeChatsha" bindtap='handleClickGenerateShareImg' style="width: 200rpx;text-align: right;" />
+<canvas canvas-id='myCanvas' style="width: 375px;height:600px;left: 10000rpx;position: fixed;"></canvas>
+<!-- <canvas canvas-id='myCanvas' style="width: 375px;height:600px;"></canvas> -->
