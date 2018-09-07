@@ -1,7 +1,7 @@
 <!--pages/articleDetails/articleDetails.wxml-->
 <wxs module="utils" src="../../utils/util.wxs"></wxs>
 <view class="body">
-  <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
+  <header title="{{title}}" category="article" loading="{{loading}}" articleInfo="{{articleDetails}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
   <menu bind:onChangeMenusOpen="handleChangeMenusOpen" is-open="{{isOpen}}" />
   <view class="container" wx:if="{{!loading}}">
     <view class="">

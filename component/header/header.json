@@ -2,6 +2,6 @@
   "component": true,
   "usingComponents": {
     "van-nav-bar": "../../miniprogram_npm/vant-weapp/nav-bar/index",
-    "van-icon": "../../miniprogram_npm/vant-weapp/icon/index"
+    "share": "../share/share"
   }
 }

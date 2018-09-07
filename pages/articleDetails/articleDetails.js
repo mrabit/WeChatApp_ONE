@@ -13,7 +13,8 @@ Page({
     isOpen: false,
     title: "一个阅读",
     id: 2758,
-    articleDetails: {}
+    articleDetails: {},
+    loading: true
   },
 
   /**

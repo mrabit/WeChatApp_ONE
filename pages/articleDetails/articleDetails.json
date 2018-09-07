@@ -3,6 +3,7 @@
   "usingComponents": {
     "header": "/component/header/header",
     "menu": "/component/menu/menu",
-    "loading": "/component/loading/loading"
+    "loading": "/component/loading/loading",
+    "share": "/component/share/share"
   }
 }

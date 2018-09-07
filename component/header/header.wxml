@@ -1,8 +1,9 @@
 <!--component/header.wxml-->
 <form report-submit="true" bindsubmit="postFormId">
-  <button form-type='submit' bindtap='handleClickOpenMenu'>
-    <van-nav-bar custom-class="header" title="{{title}}" fixed="true">
-      <van-icon name="wap-nav" bind:click="handleClickOpenMenu" slot="left" />
+  <button form-type='submit'>
+    <van-nav-bar custom-class="header" title="{{title}}" fixed="true" bind:click-left="handleClickOpenMenu">
+      <view class="iconfont icon-menu" style="width: 200rpx;text-align: left;" bind:click="handleClickOpenMenu" slot="left" />
+      <share wx:if="{{!loading}}" category="{{category}}" oneInfo="{{oneInfo}}" articleInfo="{{articleInfo}}" slot="right" />
     </van-nav-bar>
   </button>
 </form>
