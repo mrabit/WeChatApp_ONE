@@ -7,7 +7,7 @@
       <text class="text-center one-list-date block">{{item.post_date}}</text>
       <text class="text-center text-xs m-b-sm m-t-sm block">{{item.volume}}</text>
       <view class="one-img m-b">
-        <image src="{{item.img_url}}" alt="" />
+        <image src="{{'https:' + item.img_url}}" alt="" />
       </view>
       <text class="text-center text-xs block m-t-sm">{{item.title}} | {{item.pic_info}}           </text>
       <text class="wrapper block">{{item.forward}}</text>

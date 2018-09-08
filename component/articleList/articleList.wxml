@@ -7,7 +7,7 @@
   <text class="article-list-title block">{{item.title}}</text>
   <text class="article-list-author block">文 / {{utils.getAuthor(item.author_list)}}</text>
   <view class="article-list-img ">
-    <image src="{{item.img_url}}" alt="" />
+    <image src="{{'https:' + item.img_url}}" alt="" />
   </view>
   <text class="m-b-sm block">{{item.guide_word}}</text>
   <text class="article-list-time block">

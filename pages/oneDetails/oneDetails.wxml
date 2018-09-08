@@ -5,7 +5,7 @@
   <view class="container" wx:if="{{!loading}}">
     <view class="m-t p-b-xxl">
       <view class="one-img block">
-        <image class="img-full" src="{{oneInfo.img_url}}" alt="" />
+        <image class="img-full" src="{{'https:' + oneInfo.img_url}}" alt="" />
       </view>
       <view class="wrapper">
         <view class="block clearfix">

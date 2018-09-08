@@ -5,7 +5,7 @@
   <view class="container bg" wx:if="{{!loading}}">
     <navigator url="../oneDetails/oneDetails?id={{firstScreen.id}}" class="home-container">
       <view class="home-img">
-        <image mode="aspectFill" src="{{firstScreen.img_url}}" alt="" />
+        <image mode="aspectFill" src="{{'https:' + firstScreen.img_url}}" alt="" />
       </view>
       <view class="home-mask">
         <view class="home-content">
