@@ -3,7 +3,7 @@ let {
   requestData,
   postFormId
 } = require('../../utils/util.js');
-let dayjs = require('../..//miniprogram_npm/dayjs/index.js');
+let dayjs = require('dayjs');
 Page({
 
   /**

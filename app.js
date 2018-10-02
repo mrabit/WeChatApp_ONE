@@ -12,7 +12,7 @@ App({
       this.globalData.domain = 'http://192.168.0.241:8181';
     }
   },
-  debug: false,
+  debug: true,
   globalData: {
     domain: 'https://one.mrabit.com'
   },

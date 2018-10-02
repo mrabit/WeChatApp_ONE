@@ -157,7 +157,6 @@ Component({
       let ctx = wx.createCanvasContext("myCanvas", this);
       // 当前不存在二维码,在线生成
       if (!this.data.qrcode) {
-        debugger
         qrcode = this.getQRCode(this.properties[category + "Info"].id);
       }
       qrcode.then(qrcode => {
@@ -181,7 +180,10 @@ Component({
         // 取消阴影
         ctx.setShadow(0, 0, 0, "black");
         // 渲染qrcode
-        ctx.drawImage(qrcode, 375 / 2 - 50, 600 - 138 + (138 - 113) / 2, 100, 113);
+        // 小程序码
+        ctx.drawImage(qrcode, 375 / 2 - 50, 600 - 138 + (138 - 100) / 2, 100, 100);
+        //二维码
+        // ctx.drawImage(qrcode, 375 / 2 - 50, 600 - 138 + (138 - 113) / 2, 100, 113);
 
         // 文字渲染
         let arr = [];
@@ -212,14 +214,35 @@ Component({
               wx.showToast({
                 title: '长按保存图片后分享到朋友圈.',
                 icon: 'none',
-                duration: 1000,
+                duration: 2000,
                 success() {
                   setTimeout(_ => {
                     // 图片预览
                     wx.previewImage({
-                      urls: [res.tempFilePath],
-                    })
-                  }, 1000)
+                      urls: [res.tempFilePath, 'https://one.img.mrabit.com/appreciate.png'],
+                    });
+                    // 保存到相册
+                    // wx.saveImageToPhotosAlbum({
+                    //   filePath: res.tempFilePath,
+                    //   success: _ => {
+                    //     wx.showToast({
+                    //       title: '保存到系统相册成功.',
+                    //       icon: 'none',
+                    //       duration: 1000
+                    //     });
+                    //   },
+                    //   fail: _ => {
+                    //     wx.showToast({
+                    //       title: '请查看是否允许保存到系统相册.',
+                    //       icon: 'none',
+                    //       duration: 1000,
+                    //       success: _ => {
+                    //         wx.openSetting();
+                    //       }
+                    //     });
+                    //   }
+                    // });
+                  }, 2000);
                 }
               })
             },

@@ -1,3 +1,7 @@
+let md5 = require('md5');
+let {
+  secret_key
+} = require('../config.js');
 /**
  * 网络请求方法
  * @param url {string} 请求url
@@ -12,13 +16,17 @@ const requestData = (url, data, method = "GET") => {
   if (app.debug) {
     console.log('requestData url: ', url);
   }
+  const timestamp = new Date().getTime();
+  const secretoken = md5(`${timestamp}-${secret_key}`);
   return new Promise((resolve, reject) => {
     return wx.request({
       url: app.globalData.domain + url,
       data: data,
       method,
       header: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        secretoken,
+        timestamp
       },
       success: function(res) {
         if (app.debug) {
