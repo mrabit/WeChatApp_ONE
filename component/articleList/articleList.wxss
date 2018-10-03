@@ -61,7 +61,11 @@
 }
 
 .m-t-xs {
-  margin-top: 20rpx;
+  margin-top: 10rpx;
+}
+
+.m-t {
+  margin-top: 30rpx;
 }
 
 .bg-white {

@@ -3,7 +3,7 @@ let defaultTextY = 180;
 let {
   requestData
 } = require('../../utils/util.js');
-let dayjs = require('../../miniprogram_npm/dayjs/index.js');
+let dayjs = require('dayjs');
 Component({
   properties: {
     oneInfo: {

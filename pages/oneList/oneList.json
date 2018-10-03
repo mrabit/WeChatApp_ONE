@@ -4,6 +4,7 @@
     "header": "/component/header/header",
     "menu": "/component/menu/menu",
     "loading": "/component/loading/loading",
-    "end": "/component/end/end"
+    "end": "/component/end/end",
+    "appreciate": "/component/appreciate/appreciate"
   }
 }

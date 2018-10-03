@@ -3,16 +3,19 @@
   <header title="{{title}}" bind:onChangeMenusOpen="handleChangeMenusOpen" />
   <menu bind:onChangeMenusOpen="handleChangeMenusOpen" is-open="{{isOpen}}" />
   <view class="container bg">
-    <navigator url="../oneDetails/oneDetails?id={{item.id}}" class="one-list-items" wx:for="{{oneList}}" wx:key="index">
-      <text class="text-center one-list-date block">{{item.post_date}}</text>
-      <text class="text-center text-xs m-b-sm m-t-sm block">{{item.volume}}</text>
-      <view class="one-img m-b">
-        <image src="{{'https:' + item.img_url}}" alt="" />
-      </view>
-      <text class="text-center text-xs block m-t-sm">{{item.title}} | {{item.pic_info}}           </text>
-      <text class="wrapper block">{{item.forward}}</text>
-      <text class="text-center text-xs block">{{item.words_info}}</text>
-    </navigator>
+    <view wx:for="{{oneList}}" wx:key="index">
+      <navigator url="../oneDetails/oneDetails?id={{item.id}}" class="one-list-items">
+        <text class="text-center one-list-date block">{{item.post_date}}</text>
+        <text class="text-center text-xs m-b-sm m-t-sm block">{{item.volume}}</text>
+        <view class="one-img m-b">
+          <image src="{{'https:' + item.img_url}}" alt="" />
+        </view>
+        <text class="text-center text-xs block m-t-sm">{{item.title}} | {{item.pic_info}}           </text>
+        <text class="wrapper block">{{item.forward}}</text>
+        <text class="text-center text-xs block">{{item.words_info}}</text>
+      </navigator>
+      <appreciate wx:if="{{index == oneList.length-1 || (index+1)%5 == 0}}" />
+    </view>
   </view>
   <loading wx:if="{{loading}}" />
   <end wx:if="{{isEnd}}" />

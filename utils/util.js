@@ -1,6 +1,6 @@
 let md5 = require('md5');
 let {
-  secret_key
+  secret_key,version
 } = require('../config.js');
 /**
  * 网络请求方法
@@ -26,7 +26,8 @@ const requestData = (url, data, method = "GET") => {
       header: {
         'Content-Type': 'application/json',
         secretoken,
-        timestamp
+        timestamp,
+        version
       },
       success: function(res) {
         if (app.debug) {

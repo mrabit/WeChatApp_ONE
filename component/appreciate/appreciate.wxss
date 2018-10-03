@@ -1,0 +1,26 @@
+/* component/appreciate.wxss */
+.article-list-category {
+  font-size: 28rpx;
+  line-height: 20rpx;
+  text-align: center;
+}
+
+.block {
+  display: block;
+}
+
+.wrapper {
+  padding: 30rpx;
+}
+
+.m-t-xs {
+  margin-top: 10rpx;
+}
+
+.m-t {
+  margin-top: 30rpx;
+}
+
+.bg-white {
+  background: #fff;
+}

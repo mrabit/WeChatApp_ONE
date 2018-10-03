@@ -15,7 +15,9 @@
         </view>
       </view>
     </navigator>
-    <article-list articleList="{{articleList}}" />
+    <view class="m-t-sm" wx:if="{{articleList.length > 0}}">
+      <article-list articleList="{{articleList}}" />
+    </view>
   </view>
   <loading wx:if="{{loading}}" />
 </view>
