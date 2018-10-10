@@ -1,5 +1,5 @@
 <!--component/appreciate.wxml-->
-<view class="m-t-xs bg-white wrapper block" bindtap='handleClickAppreciate'>
+<navigator target="miniProgram" path="pages/apps/largess/detail?id=vc0fY3Hntqg%3D" app-id="{{appid}}" class="m-t-xs bg-white wrapper block" >
   <text class="article-list-category block">
     - 赞赏 - 
   </text>
@@ -7,4 +7,4 @@
     <image mode="aspectFill" src="https://one.img.mrabit.com/appreciate_small.png" alt="" />
   </view> -->
   <text class="m-t block">赞赏以支持作者对于服务器的日常开销</text>
-</view>
+</navigator>
