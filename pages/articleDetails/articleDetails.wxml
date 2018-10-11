@@ -31,6 +31,7 @@
             </view>
             <text class="block">{{author.desc}}</text>
           </view>
+          <ad class="m-t-lg" unit-id="{{article_unit_id}}"></ad>          
         </view>
       </view>
       <form report-submit="true" bindsubmit="postFormId" class="article-footer">

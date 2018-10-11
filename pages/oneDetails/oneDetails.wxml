@@ -28,6 +28,7 @@
         <text class="text-muted font-xs one-words-info m-t block text-center">
           {{oneInfo.words_info}}
         </text>
+        <ad class="m-t-lg" unit-id="{{one_unit_id}}"></ad>
       </view>
       <form report-submit="true" bindsubmit="postFormId" class="one-footer">
         <button form-type='submit' class="{{!oneInfo.prev?'text-muted':''}}" data-id="{{oneInfo.prev}}" bindtap='getOneDetails'>上一篇</button>

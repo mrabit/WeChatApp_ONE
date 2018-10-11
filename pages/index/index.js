@@ -2,9 +2,11 @@
 let {
   requestData
 } = require('../../utils/util.js');
+let { index_unit_id } = require('../../config.js');
 let dayjs = require('dayjs');
 Page({
   data: {
+    index_unit_id,
     isOpen: false,
     title: "一个",
     loading: true,

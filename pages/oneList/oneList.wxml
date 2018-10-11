@@ -14,7 +14,8 @@
         <text class="wrapper block">{{item.forward}}</text>
         <text class="text-center text-xs block">{{item.words_info}}</text>
       </navigator>
-      <appreciate wx:if="{{index == oneList.length-1 || (index+1)%5 == 0}}" />
+      <appreciate wx:if="{{(oneList.length < 4 && index == oneList.length-1) || (index+1)%4 == 0}}" />
+      <ad class="m-t-xs" wx:if="{{(oneList.length < 4 && index == oneList.length-1) || (index+1)%4 == 0}}" unit-id="{{one_unit_id}}"></ad>
     </view>
   </view>
   <loading wx:if="{{loading}}" />

@@ -88,12 +88,20 @@ button, button::after, .button-hover {
   margin-bottom: 20rpx;
 }
 
-.m-t-xl {
-  margin-top: 80rpx;
+.m-t-xs {
+  margin-top: 10rpx;
 }
 
 .m-t-sm {
   margin-top: 20rpx;
+}
+
+.m-t-lg {
+  margin-top: 40rpx;
+}
+
+.m-t-xl {
+  margin-top: 80rpx;
 }
 
 .m-b-lg {

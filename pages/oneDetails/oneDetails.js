@@ -3,6 +3,7 @@ let {
   requestData,
   postFormId
 } = require('../../utils/util.js');
+let { one_unit_id } = require('../../config.js');
 let dayjs = require('dayjs');
 Page({
 
@@ -10,6 +11,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    one_unit_id,
     isOpen: false,
     title: "一个图文",
     loading: true,

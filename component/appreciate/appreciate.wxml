@@ -6,5 +6,5 @@
   <!-- <view class="article-list-img">
     <image mode="aspectFill" src="https://one.img.mrabit.com/appreciate_small.png" alt="" />
   </view> -->
-  <text class="m-t block">赞赏以支持作者对于服务器的日常开销</text>
+  <text class="m-t block">赞赏或点击广告以支持作者对于服务器的日常开销</text>
 </navigator>
