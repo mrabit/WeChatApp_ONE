@@ -15,7 +15,7 @@
         </view>
       </view>
     </navigator>
-    <ad class="m-t-sm" unit-id="{{index_unit_id}}"></ad>
+    <ad class="m-t-sm" unit-id="{{index_unit_id}}" wx:if="{{!debug}}"></ad>
     <article-list wx:if="{{articleList.length > 0}}" articleList="{{articleList}}" />
   </view>
   <loading wx:if="{{loading}}" />

@@ -1,5 +1,10 @@
 // component/articleList/articleList.js
-let { article_unit_id } = require('../../config.js');
+let {
+  article_unit_id
+} = require('../../config.js');
+const {
+  debug
+} = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -11,6 +16,7 @@ Component({
     }
   },
   data: {
-    article_unit_id
+    article_unit_id,
+    debug
   }
 })

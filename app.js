@@ -2,6 +2,10 @@
 let {
   requestData
 } = require("./utils/util.js");
+let {
+  domain,
+  dev_domain
+} = require('config.js');
 App({
   onLaunch: function() {
     // // 展示本地存储能力
@@ -9,12 +13,12 @@ App({
     // logs.unshift(Date.now())
     // wx.setStorageSync('logs', logs)
     if (this.debug) {
-      this.globalData.domain = 'http://192.168.0.241:8181';
+      this.globalData.domain = dev_domain;
     }
   },
   debug: false,
   globalData: {
-    domain: 'https://one.mrabit.com'
+    domain
   },
   login() {
     // 登录

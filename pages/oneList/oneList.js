@@ -2,14 +2,19 @@
 const {
   requestData
 } = require('../../utils/util.js');
-let { one_unit_id } = require('../../config.js');
+let {
+  one_unit_id
+} = require('../../config.js');
 let dayjs = require('dayjs');
+let {
+  debug
+} = getApp();
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
+    debug,
     one_unit_id,
     isOpen: false,
     isEnd: false,

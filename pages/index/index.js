@@ -2,10 +2,17 @@
 let {
   requestData
 } = require('../../utils/util.js');
-let { index_unit_id } = require('../../config.js');
+let {
+  index_unit_id
+} = require('../../config.js');
 let dayjs = require('dayjs');
+let {
+  debug
+} = getApp();
+console.log(debug)
 Page({
   data: {
+    debug,
     index_unit_id,
     isOpen: false,
     title: "一个",
