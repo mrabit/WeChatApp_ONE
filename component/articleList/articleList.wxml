@@ -15,6 +15,6 @@
       {{item.post_date}}
     </text>
   </navigator>
-  <appreciate wx:if="{{(articleList.length < 4 && index == articleList.length-1) || (index+1)%4 == 0}}" />
-  <ad class="m-t-xs" wx:if="{{(articleList.length < 4 && index == articleList.length-1) || (index+1)%4 == 0}}" unit-id="{{article_unit_id}}"></ad>
+  <appreciate wx:if="{{(articleList.length < 4 && index == articleList.length-1) || ((index+1)%4 == 0 && (index+1)/4%2 == 0)}}" />
+  <ad class="m-t-xs" wx:if="{{articleList.length > 4 && (index+1)%4 == 0 && (index+1)/4%2 == 1}}" unit-id="{{article_unit_id}}"></ad>
 </view>

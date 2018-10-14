@@ -43,7 +43,6 @@ Component({
         this.setData({
           menus
         })
-        console.log(this.data.menus)
       })
     }
   }
