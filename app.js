@@ -16,7 +16,7 @@ App({
       this.globalData.domain = dev_domain;
     }
   },
-  debug: false,
+  debug: true,
   globalData: {
     domain
   },
